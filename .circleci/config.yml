@@ -16,7 +16,9 @@ workflows:
             - build
 
 jobs:
-  ruby: circleci/ruby@1.4.0
+  ruby: 
+    docker:
+      - image: circleci/ruby:1.4.0
   
   build: 
     working_directory: ~/todo_list
